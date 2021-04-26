@@ -2,9 +2,7 @@ from flask import Flask,request,make_response,render_template
 import os,json
 import requests
 import bs4
-import requests
-import pandas as pd
-import csv
+
 
 app = Flask(__name__) 
 
