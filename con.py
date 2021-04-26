@@ -26,7 +26,7 @@ def processRequest(req):
         for data in sp.find_all('h5'):
             d=data.text
             s.append(d)
-        cases="Confirmed"+":"+s[0]+'\n'+"Acive"+":"+s[1]+'\n'+"Recoverd"+":"+s[2]+'\n'+"Deaths"+":"+s[3]
+        cases="Confirmed"+":"+s[0]+'\n'+"Active"+":"+s[1]+'\n'+"Recoverd"+":"+s[2]+'\n'+"Deaths"+":"+s[3]
     return {
         "fulfillmentText": cases
     	    }
