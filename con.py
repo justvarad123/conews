@@ -19,7 +19,7 @@ def processRequest(req):
     result = req.get("queryResult")
     parameters = result.get("parameters")
     if parameters.get("news") :
-    	url="https://coronaclusters.in/maharashtra/sangli#data"
+        url="https://coronaclusters.in/maharashtra/sangli#data"
         ds=requests.get(url)
         sp=bs4.BeautifulSoup(ds.text,'html.parser')
         s=[]
@@ -28,7 +28,7 @@ def processRequest(req):
             s.append(d)
         cases="Confirmed"+":"+s[0]+'\n'+"Acive"+":"+s[1]+'\n'+"Recoverd"+":"+s[2]+'\n'+"Deaths"+":"+s[3]
     return {
-    		"fulfillmentText": cases
-    		}
+        "fulfillmentText": cases
+    	    }
 if __name__ == '__main__':
     app.run(debug = True) 
